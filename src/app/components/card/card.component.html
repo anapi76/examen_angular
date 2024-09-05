@@ -1,0 +1,16 @@
+<div class="card">
+    <div class='photo'  [ngStyle]="{'backgroundImage':'url(' + images[index] + ')'}">
+    </div>
+    <div class="footer">
+        <div class="titles">
+            <h2 class='card-title'>{{name}}</h2>
+        </div>
+        <div class="bigger">
+            <div class="trigger" (click)="openModal()">Ampliar</div>
+        </div>
+    </div>
+    <div id='render-more'>
+        <button (click)="onClick(-1)">ANTERIOR</button>
+        <button (click)="onClick(1)">SIGUIENTE</button>
+    </div>
+</div>

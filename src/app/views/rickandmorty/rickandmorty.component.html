@@ -1,0 +1,27 @@
+<div class="body">
+    <div class="container-two">
+
+        <table id="tablebot">
+            <tr>
+                @for(item of titles;track item;let i=$index){
+                <td (click)="onClick(i)" class="nutrition"><span class="category">{{item}}</span></td>
+                }
+            </tr>
+        </table>
+        <div class="slider">
+            <div class="panel">
+                <div class="img">
+                    <img src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/series-television/11-cosas-que-no-sabias-de-rick-y-morty/137666502-1-esl-ES/11-cosas-que-no-sabias-de-Rick-y-Morty.jpg?crop=1xw:0.75xh;center,top&resize=1200:*"
+                        width="250px">
+                </div>
+                <app-content [name]="name" [status]="status"></app-content>
+                <div class="buttons">
+                    <a (click)="changePage(-1)">Anterior</a>
+                    <a (click)="changePage(+1)">Siguiente</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

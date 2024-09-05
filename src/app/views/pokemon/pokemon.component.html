@@ -1,0 +1,23 @@
+<div id="page">
+
+    <section>
+        <div class="content">
+            <div class="grid">
+         @for(item of content;track item;let i=$index){
+            <app-card [name]="item.name" [images]='item.images' (data)='onClick($event)' (data1)='onModal($event)' ></app-card >
+         }         
+            </div>
+            <div id='render-more'>
+                @if(prevPage!==null){
+                    <button (click)="changePage(-1)">ANTERIORES</button>
+                }
+                @if(nextPage!==null){
+                    <button (click)="changePage(+1)">SIGUIENTES</button>
+                }
+            </div>
+        </div>
+    </section>
+
+</div>
+<app-modal (closeModal)="onClose($event)" [imageModal]="imageModal" [modal]="modal" [name]="name"></app-modal>
+
