@@ -1,27 +1,16 @@
-# MyApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Actividad 1:
+Tarea: Crear las vistas: pokemon y rickandmorty y el componente header, desde el cual se podrá navegar a las dos vistas creadas. En el componente header implementa la lógica necesaria para que cuando el usuario deslice el cursor del ratón sobre la inscripción Ejercicio 1 esta se cambie por Pokemon y cuando lo retire, vuelva a mostrar el texto original –Ejercicio 1-. Para la inscripción Ejercicio 2 sucederá lo mismo, pero cambiándose el contenido por Rick & Morty.
+(1 punto).
+### Actividad 2.
+Tarea: En la vista Pokemon implementa la lógica necesaria para que al cargarse la vista, se realice una petición GET a la API REST pública ‘Poke API’ para obtener los datos de todos los pokemon y mostrarlos en la interfaz de la aplicación. Para ello deberás implementar un servicio, las interfaces necesarias y crear un componente Card e instanciarlo en la vista pokemon. Empleando @Input, @Output y EventEmitter implementa la lógica necesaria para que se muestre en cada componente Card los datos siguientes de cada pokemon obtenidos de la petición GET: nombre del pokemon, así como una imagen del pokemon correspondiente. La imagen a mostrar se obtendrá de los sprites front_default, back_default, back_shiny, front_shiny del pokemon y se implementará la lógica necesaria en el componente Card para que al pulsar sobre los botones ‘Anterior’ y ‘Siguiente’ se pueda navegar sobre las cuatro imágenes, formando un carrusel circular.
+Examen 2ª Evaluación:
+PROCESO DE DESARROLLO
+Se deberán mostrar los pokemon siguiendo la paginación que ofrece la propia API, es decir, mostrando 20 pokemon por pantalla. Al pulsar sobre los botones ‘Anteriores’ y ‘Siguientes’ se deberá poder navegar sobre la paginación implementada. Si se está en la primera página de la paginación, no se mostrará el botón ‘Anteriores’, únicamente ‘Siguientes’.
+Crea un componente Modal e instáncialo en la vista pokemon. Implementa la lógica necesaria mediante @Input, @Output y EventEmitter para que al hacer click sobre la foto del componente Card se active la pantalla modal del componente Modal y se muestre la foto del pokemon sobre el que se ha realizado click y el nombre de dicho pokemon. Al hacer click sobre el botón para cerrar la pantalla modal, ésta deberá dejar de mostrarse. Nota: la imagen a mostrar en la pantalla modal será la que muestre el carrusel de cuatro imágenes en el momento que el usuario haya realizado click sobre dicha imagen.
+Al pulsar sobre un pokemon, se abre una pantalla modal con el nombre del pokemon y la imagen
+(5 puntos).
+### Actividad 3.
+Tarea: En la vista rickandmorty implementa la lógica necesaria para que al cargarse la vista, se realice una petición GET a la API REST pública ‘The Rick and Morty API’ para obtener los datos de todos los personajes de la serie. Para ello deberás implementar las funciones pertinentes en el servicio creado para la actividad anterior, las interfaces necesarias y crear un componente Content e instanciarlo en la vista rickandmorty. Empleando @Input implementa la lógica necesaria para que se muestre en el componente Content los datos siguientes obtenidos de la petición GET: nombre del personaje y status. Al pulsar sobre los botones ‘Anterior’ y ‘Siguiente’ se deberá poder navegar sobre los personajes que devuelve la petición para la primera página de la paginación de la API.
+Si se hace click sobre la inscripción Episodios, se mostrará a partir del componente Content el nombre del Episodio y la fecha en que se emitió.
+Si se hace click sobre la inscripción Localizaciones se mostrará el nombre de la localización y el tipo.
+(4 puntos).
